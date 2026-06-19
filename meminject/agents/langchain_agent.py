@@ -54,11 +54,15 @@ class LangChainAgent(BaseMemoryAgent):
 
         try:
             from langchain_openai import ChatOpenAI
-            from langchain.schema import SystemMessage, HumanMessage, AIMessage
+            # LangChain >= 0.1 moved schema messages to langchain_core
+            try:
+                from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
+            except ImportError:
+                from langchain.schema import SystemMessage, HumanMessage, AIMessage
         except ImportError as e:
             raise ImportError(
                 "LangChainAgent requires 'langchain' and 'langchain-openai'. "
-                "Install with: pip install langchain langchain-openai"
+                "Install with: pip install langchain langchain-openai langchain-core"
             ) from e
 
         kwargs = {"model": model, "temperature": temperature}
