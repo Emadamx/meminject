@@ -137,11 +137,10 @@ meminject/
 
 Initial experiments on a GPT-3.5-Turbo agent with FAISS memory:
 
-| Strategy | Success Rate (10-turn) | Avg. Activation Turn |
+| Strategy | Success Rate | First Activation Turn |
 |---|---|---|
-| `direct_write` | 63% | 2.1 |
-| `semantic_blend` | 41% | 4.8 |
-| `retrieval_bias` | 57% | 1.9 |
+| `direct_write` | 75% | Turn 2 |
+| `semantic_blend` | 67% | Turn 2 |
 
 > These results are preliminary on a small benchmark. Full evaluation across diverse agent architectures is ongoing. See [`examples/benchmark_suite.py`](examples/benchmark_suite.py).
 
