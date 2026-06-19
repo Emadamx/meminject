@@ -135,7 +135,9 @@ meminject/
 
 ## 📊 Benchmarks
 
-Initial experiments on a GPT-3.5-Turbo agent with FAISS memory:
+Initial experiments on a MockMemoryAgent with DictMemoryStore backend 
+(keyword-based retrieval). Full evaluation on a GPT-3.5-Turbo agent 
+with FAISS vector memory is ongoing.
 
 | Strategy | Success Rate | First Activation Turn |
 |---|---|---|
